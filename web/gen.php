@@ -3,7 +3,7 @@
 $data = $_POST["playlist"];
 $file = generateRandomString();
 file_put_contents($file.".txt", $data);
-$output = ["data" => "https://logdown-1.herokuapp.com/63999c81aabe1.txt", "ok" => true];
+$output = ["data" => "https://logdown-1.herokuapp.com/".$file.".txt", "ok" => true];
 echo json_encode($output);
 
 function generateRandomString($length = 13) {
